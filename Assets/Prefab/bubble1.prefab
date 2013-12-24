@@ -10,7 +10,6 @@ GameObject:
   - 4: {fileID: 400000}
   - 198: {fileID: 19800000}
   - 199: {fileID: 19900000}
-  - 87: {fileID: 8700000}
   - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: bubble1
@@ -26,40 +25,10 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: -.707106829, y: 0, z: 0, w: .707106829}
-  m_LocalPosition: {x: .198521614, y: -4.57111168, z: 5.68452311}
+  m_LocalPosition: {x: 0, y: -5, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
---- !u!87 &8700000
-MeshParticleEmitter:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  serializedVersion: 2
-  m_Enabled: 1
-  m_Emit: 1
-  minSize: .100000001
-  maxSize: .100000001
-  minEnergy: 3
-  maxEnergy: 3
-  minEmission: 50
-  maxEmission: 50
-  worldVelocity: {x: 0, y: 0, z: 0}
-  localVelocity: {x: 0, y: 0, z: 0}
-  rndVelocity: {x: 0, y: 0, z: 0}
-  emitterVelocityScale: .0500000007
-  tangentVelocity: {x: 0, y: 0, z: 0}
-  angularVelocity: 0
-  rndAngularVelocity: 0
-  rndRotation: 0
-  Simulate in Worldspace?: 1
-  m_OneShot: 0
-  m_InterpolateTriangles: 0
-  m_Systematic: 0
-  m_MinNormalVelocity: 0
-  m_MaxNormalVelocity: 0
-  m_Mesh: {fileID: 0}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -71,8 +40,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30f787eb9fe764e58b29880e4c876a03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Rate: 2.42000008
-  PS: {fileID: 0}
+  Rate: 1.39999998
+  MainCamera: {fileID: 0}
+  Tespos: {x: 0, y: 0, z: 0}
+  inputRegion: 32
+  QueueFunctions: {fileID: 0}
 --- !u!198 &19800000
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -86,11 +58,11 @@ ParticleSystem:
   looping: 1
   prewarm: 0
   playOnAwake: 1
-  moveWithTransform: 1
+  moveWithTransform: 0
   InitialModule:
     enabled: 1
     startLifetime:
-      scalar: 2.71000004
+      scalar: 7
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -123,7 +95,7 @@ ParticleSystem:
         m_PostInfinity: 2
       minMaxState: 0
     startSpeed:
-      scalar: 2.95000005
+      scalar: 1.60000002
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -250,7 +222,7 @@ ParticleSystem:
         rgba: 4278190080
       minMaxState: 0
     startSize:
-      scalar: .620000005
+      scalar: 1.70000005
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -317,13 +289,13 @@ ParticleSystem:
       minMaxState: 0
     gravityModifier: 0
     inheritVelocity: 0
-    maxNumParticles: 22
+    maxNumParticles: 90
   ShapeModule:
     serializedVersion: 2
     enabled: 1
     type: 4
     radius: .219192713
-    angle: 44.1638527
+    angle: 48.4765053
     length: 5
     boxX: 1
     boxY: 1
